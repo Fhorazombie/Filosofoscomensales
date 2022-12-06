@@ -1,26 +1,26 @@
 export class Tenedor{
     name = "";
-    colaArray = [];
+    listaDeEspera = [];
     ocupado = "";
     constructor(nombre){
         this.name = nombre
     }
     cola(name){
-        this.colaArray.push(name);
+        this.listaDeEspera.push(name);
     }
     libre(){
-        return this.colaArray[0];
+        return this.listaDeEspera[0];
     }
     tomar(name){
-        let colaPrimero = this.colaArray[0];
+        let colaPrimero = this.listaDeEspera[0];
         if(name == colaPrimero){
-            this.ocupado = this.colaArray[0];
+            this.ocupado = this.listaDeEspera[0];
         }
     }
     liberar(name){
-        const index = this.colaArray.indexOf(name);
+        const index = this.listaDeEspera.indexOf(name);
         if(index >= 0){
-            this.colaArray.splice(index, 1);
+            this.listaDeEspera.splice(index, 1);
         }
     }
 }

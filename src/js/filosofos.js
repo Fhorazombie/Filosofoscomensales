@@ -1,8 +1,4 @@
 export class Filosofo {
-    hambre = 0;
-    pensando = 0;
-    comiendo = 0;
-    lleno = 0;
     nombre = "";
     tenedor1;
     tenedor2;
@@ -67,7 +63,6 @@ export class Filosofo {
     }
 
     pensar(){
-        this.pensando = 1;
         console.log(`${this.nombre} esta pensando`)
         let filoInstance = this;
         setTimeout(function(){
@@ -76,9 +71,7 @@ export class Filosofo {
     }
 
     tieneHambre(){
-            this.pensando = 0;
             console.log(`Tiene hambre ${this.nombre}`)
-            this.hambre = 1;
             this.agregarCola()
             this.verificarTenedores()
     }
@@ -114,7 +107,6 @@ export class Filosofo {
     }
 
     comer(){
-        this.hambre = 0
         console.log(`${this.nombre} esta comiendo, chomp! chomp!`)
         const tenedor2 = document.getElementById(this.tenedor2.name);
         const tenedor2iz = document.getElementById(this.tenedor2.name+"izquierdo");
@@ -125,7 +117,6 @@ export class Filosofo {
         imgfilosofo.src = `/src/img/${this.nombre}_eat.png`;
         let filoInstance = this;
         setTimeout(function(){
-            filoInstance.lleno = 1;
             console.log(`${filoInstance.nombre} termino de comer`)
             filoInstance.liberarTenedores();
             imgfilosofo.src = `/src/img/${filoInstance.nombre}.jpg`;
