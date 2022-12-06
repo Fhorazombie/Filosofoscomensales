@@ -1,0 +1,109 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100vh;
+}
+
+.filosofos {
+    width: 25vh;
+    height: 22vh;
+    overflow: hidden;
+}
+
+.filosofos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sopas {
+    width: 15vw;
+    height: 15vh;
+}
+
+.sopas img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.tenedor {
+    width: 20vh;
+    height: 20vh;
+    position: absolute;
+    right: 0;
+    z-index: 20;
+}
+
+.tenedor img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.tenedor h1 {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: red;
+    width: 4vw;
+    height: 4vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.volteado {
+    left: 0;
+    transform: rotate(90deg);
+    display: none;
+}
+
+.volteado h1 {
+    transform: rotate(271deg);
+}
+
+.asiento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 33%;
+}
+
+#mesa {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/src/img/table.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+
+#mesa > .asiento:nth-child(-n+3) .tenedor {
+    right: 60%;
+    transform: rotate(90deg);
+}
+#mesa > .asiento:nth-child(-n+3) .tenedor h1 {
+    transform: rotate(271deg);
+}
+#mesa > .asiento:nth-child(-n+3) .volteado {
+    left: 60%;
+    transform: rotate(360deg);
+}
+#mesa > .asiento:nth-child(-n+3) .volteado h1 {
+    transform: rotate(0deg);
+}
