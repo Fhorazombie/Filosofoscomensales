@@ -20,7 +20,7 @@ export class Filosofo {
         let filosofos = document.createElement("div");
         filosofos.classList.add("filosofos");
         let imgfilosofo = document.createElement('img');
-        imgfilosofo.src = `/src/img/${this.nombre}.jpg`;
+        imgfilosofo.src = `src/img/${this.nombre}.jpg`;
         imgfilosofo.setAttribute("id", this.nombre+"_img");
         filosofos.appendChild(imgfilosofo);
         asiento.appendChild(filosofos);
@@ -29,7 +29,7 @@ export class Filosofo {
         let sopas = document.createElement("div");
         sopas.classList.add("sopas");
         let imgsopa = document.createElement('img');
-        imgsopa.src = `/src/img/spagety.png`;
+        imgsopa.src = `src/img/spagety.png`;
         sopas.appendChild(imgsopa);
         asiento.appendChild(sopas);
 
@@ -40,7 +40,7 @@ export class Filosofo {
         h1.appendChild(document.createTextNode(this.tenedor1.name));
         tenedor.appendChild(h1);
         let imgtenedor = document.createElement('img');
-        imgtenedor.src = `/src/img/fork.png`;
+        imgtenedor.src = `src/img/fork.png`;
         tenedor.appendChild(imgtenedor);        
         tenedor.setAttribute("id", this.tenedor1.name);
         asiento.appendChild(tenedor);
@@ -53,7 +53,7 @@ export class Filosofo {
         h12.appendChild(document.createTextNode(this.tenedor2.name));
         tenedor2.appendChild(h12);
         let imgtenedor2 = document.createElement('img');
-        imgtenedor2.src = `/src/img/fork.png`;
+        imgtenedor2.src = `src/img/fork.png`;
         tenedor2.appendChild(imgtenedor2);
         tenedor2.setAttribute("id", this.tenedor2.name+"izquierdo");
         asiento.appendChild(tenedor2);
@@ -114,12 +114,12 @@ export class Filosofo {
         tenedor2iz.style.display = "block";
 
         const imgfilosofo = document.getElementById(this.nombre+"_img");
-        imgfilosofo.src = `/src/img/${this.nombre}_eat.png`;
+        imgfilosofo.src = `src/img/${this.nombre}_eat.png`;
         let filoInstance = this;
         setTimeout(function(){
             console.log(`${filoInstance.nombre} termino de comer`)
             filoInstance.liberarTenedores();
-            imgfilosofo.src = `/src/img/${filoInstance.nombre}.jpg`;
+            imgfilosofo.src = `src/img/${filoInstance.nombre}.jpg`;
             tenedor2.style.display = "";
             tenedor2iz.style.display = "";
             filoInstance.pensar();
