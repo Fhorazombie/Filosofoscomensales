@@ -87,7 +87,7 @@ body{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    background-image: url(/src/img/table.png);
+    background-image: url(src/img/table.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 80%;
